@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Javascript Objects</title>
+  </head>
+  <body>
+    <script>
+      // var chair = new Object();
+      // chair.width = 200;
+      // chair.height = 400;
+      // chair.color = 'black';
+      // chair.model = 'wooden';
+
+      // var chair = new Object({ width: 200, height: 400, color: 'black', model: 'wooden' });
+
+      var chair = new Object();
+      chair['width'] = 200;
+      chair['height'] = 400;
+      chair['color'] = 'black';
+      chair['model'] = 'wooden';
+
+      var car = new Object({
+        engine: '2000cc',   // property
+        brand: 'Chevrolet', // property
+        model: 'Aveo',      // property
+        color: 'Silver',    // property
+        price: 12999,       // property
+        startEngine: function(gear) {
+          console.log('Engine starting with gear position ' + gear); // Method body
+        },
+        stopEngine: function(gear) {
+          console.log('Engine stopped with gear position ' + gear); // Method body
+        }
+      });
+
+      car.startEngine(1);
+      car.stopEngine(1);
+    </script>
+  </body>
+</html>
